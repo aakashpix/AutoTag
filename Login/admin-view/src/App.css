@@ -1,0 +1,130 @@
+:root {
+  --primary-color: #5d56f9;
+  --secondary-color: #f7f9fc;
+  --text-color: #333;
+  --input-bg-color: #fff;
+  --border-color: #e0e0e0;
+  --box-shadow-light: rgba(0, 0, 0, 0.08);
+  --box-shadow-dark: rgba(0, 0, 0, 0.15);
+}
+
+body {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  color: var(--text-color);
+}
+
+.login-container {
+  width: 100%;
+  max-width: 450px;
+  padding: 50px;
+  background-color: var(--input-bg-color);
+  border-radius: 20px;
+  box-shadow: 0 10px 40px var(--box-shadow-light);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.login-container:hover {
+  box-shadow: 0 15px 50px var(--box-shadow-dark);
+  transform: translateY(-5px);
+}
+
+.login-form h2 {
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  position: relative;
+}
+
+.login-form h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background-color: var(--primary-color);
+  border-radius: 2px;
+}
+
+.input-group {
+  margin-bottom: 25px;
+  text-align: left;
+  position: relative;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #666;
+  transition: all 0.2s ease;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 15px 20px;
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: var(--secondary-color);
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 4px rgba(93, 86, 249, 0.2);
+  background-color: #fff;
+}
+
+.login-button {
+  width: 100%;
+  padding: 18px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(93, 86, 249, 0.4);
+}
+
+.login-button:hover {
+  background-color: #4b44d3;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(93, 86, 249, 0.5);
+}
+
+@media (max-width: 600px) {
+  .login-container {
+    padding: 30px;
+    margin: 20px;
+  }
+}
+/* Add this at the bottom of src/App.css */
+.fade-in {
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
